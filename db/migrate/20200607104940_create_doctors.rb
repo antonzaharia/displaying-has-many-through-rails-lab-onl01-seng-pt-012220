@@ -4,6 +4,7 @@ class CreateDoctors < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :department
       t.has_many :appointments
+      t.has_many :patients, through: :appointments
 
       t.timestamps
     end
